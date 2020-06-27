@@ -60,12 +60,13 @@ h1 {
 }
 
 button {
-    outline      : none;
-    border       : none;
-    padding      : 10px 10px 10px;
-    text-align   : center;
-    border-radius: .8rem;
-    transition   : transform .2s;
+    outline         : none;
+    border          : none;
+    padding         : 10px 10px 10px;
+    text-align      : center;
+    border-radius   : .8rem;
+    background-color: ;
+    transition      : transform .2s;
 }
 
 button:hover {
@@ -75,4 +76,11 @@ button:hover {
 
 button:active {
     transform: scale(.97);
+}
+
+::placeholder {
+    text-align: center;
+    color     : rgb(182, 182, 182);
+    padding   : 60px 60px 60px;
+    font-size : 12px;
 }
