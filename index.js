@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    var text = req.body.text
+    const text = req.body.text
     const speech = new gtts(text)
     speech.save("output.mp3")
         .then(function () {
