@@ -52,10 +52,11 @@ textarea {
 
 
 h1 {
-    position    : relative;
-    /* top      : -40px; */
-    font-size   : 44px;
-    color       : rgb(214, 214, 214);
+    position      : relative;
+    /* top        : -40px; */
+    font-size     : 44px;
+    color         : rgb(214, 214, 214);
+    letter-spacing: .6rem;
 }
 
 button {
