@@ -6,7 +6,7 @@ const app = express()
 
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }))
-app.set('view engine','ejs')
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -17,11 +17,14 @@ app.post('/', (req, res) => {
     const speech = new gtts(text)
     speech.save("output.mp3")
         .then(function () {
-          res.download("output.mp3")
+            res.download("output.mp3")
         }).catch(function (err) {
-        
-    })
+
+        })
 })
+
+app.use(express.static(__dirname + '/styles'));
+app.use(express.static(__dirname + '/images'));
 
 app.listen(5000, function () {
     console.log("Server is listening on Port 5000")
